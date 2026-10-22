@@ -390,3 +390,6 @@ transform: scale(1);}
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(38, 61, 50, 0.20);
 }
+html {
+    scroll-behavior: smooth;
+}

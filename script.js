@@ -135,3 +135,19 @@ imagenAmpliada.addEventListener("touchend", function(evento) {
     }
 
 });
+function abrirGaleriaOculta(event) {
+    event.preventDefault();
+
+    // Las primeras 3 imágenes pertenecen a la galería visible.
+    // La imagen de índice 3 es la primera de la galería oculta.
+    indiceActual = 3;
+
+    // Mostramos la imagen en nuestro visor original.
+    imagenAmpliada.src = imagenes[indiceActual].src;
+
+    // Abrimos el visor en pantalla completa.
+    visor.style.display = "flex";
+
+    // Actualizamos el contador.
+    actualizarContador();
+}
