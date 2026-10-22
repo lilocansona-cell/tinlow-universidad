@@ -1,0 +1,392 @@
+*{box-sizing: border-box;}
+body {
+    margin: 0;
+    background-color: #f5f0e6;
+    color: #292923;
+}
+.logo img {width: 150px;
+ height: auto;}
+ header {display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #263d32;
+padding: 10px 80px;
+min-height: 150px;}
+nav {display: flex;
+gap: 25px;}
+nav a:hover {
+    background-color: #D8BE83;
+    transform: translateY(-3px);
+} 
+nav a {text-decoration: none;
+background-color: #b5965a;
+color: #1f2a24;
+transition: background-color 0.3s ease; transform: 0.3s ease;
+padding: 12px 20px;
+border-radius: 8px;
+font-weight: bold;}
+.Fondo-Banner {
+    position: relative;
+    width: 100%;
+    background-color: #1b3027;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.Fondo-Banner::before {
+    content: "";
+    position: absolute;
+    inset: -30px;
+    background-image: url("banner-tinlow.png");
+    background-size: cover;
+    background-position: center;
+    filter: blur(35px) brightness(0.35);
+    z-index: -1;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+
+    background-image: url("banner-tinlow.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body {
+    background-color: #f5f0e6;
+}
+.Boton-Banner {
+    position: absolute;
+    left: 13%;
+    top: 72%;
+    width: 26%;
+    height: 9%;
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+}
+.banner h1 {font-size: 26px;
+letter-spacing: 1px;
+text-align: center;
+margin: 0;
+}
+.banner h1 {font-size: 42px;
+font-weight: 600;
+letter-spacing: 2px;
+text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.Mostacilla-Checa { display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;}
+.Imagen-Checa {width: 50%;}
+.Imagen-Checa img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0;
+    border-radius: 10px;}
+.Texto-Checa {
+    width: 50%;
+    max-width: 550px;
+    background-color: #e6d9c5;
+    color: #292923;
+    padding: 45px;
+    border-radius: 18px;
+    border: 1px solid #b5965a;
+    box-shadow: 0 12px 30px rgba(38, 61, 50, 0.15);
+    box-sizing: border-box;
+}
+.Mostacilla-Miyuki {display: flex;
+    flex-direction: row-reverse;
+align-items: center;
+gap: 30px;
+padding: 40px;}
+.Imagen-Miyuki {width: 50%;}
+.Imagen-Miyuki img {width: 100%;
+    max-width: 400px;
+height: auto;
+display: block;
+margin: 0 auto;
+border-radius: 10px;}
+.Texto-Miyuki {
+    width: 50%;
+    max-width: 550px;
+    background-color: #e6d9c5;
+    color: #292923;
+    padding: 45px;
+    border-radius: 18px;
+    border: 1px solid #b5965a;
+    box-shadow: 0 12px 30px rgba(38, 61, 50, 0.15);
+    box-sizing: border-box;
+}
+.Mas {padding: 40px;
+text-align: center;}
+.Galeria {display: grid;
+grid-template-columns: repeat(3, 230px);
+justify-content: center;
+align-items: start;
+gap: 20px;}
+.Galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    border: 2px solid #b5965a;
+    box-shadow: 0 8px 20px rgba(38, 61, 50, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.Galeria img:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(38, 61, 50, 0.25);
+    cursor: pointer;
+}
+.Pie-Pagina {background-color: #263d32;
+color: white;
+padding: 40px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 20px;}
+.Pie-Pagina h2,
+.Pie-Pagina h3 {color: #D8BE83;
+letter-spacing: 1px;
+}
+.Info-Tinlow {width: 45%;}
+.Contacto {width: 45%;}
+.Derechos {width: 100%;
+text-align: center;}
+.Whatsapp-Flotante {position: fixed;
+bottom: 25px;
+right: 25px;
+width: 60px;
+height: 60px;
+background-color: #25d366;
+color: white;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 32px;
+text-decoration: none;
+z-index: 1000;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+transition: transform 0.3s ease;
+}
+.Whatsapp-Flotante:hover {transform: scale(1.2);}
+@media (max-width: 768px) {
+    .Mostacilla-Checa,
+    .Mostacilla-Miyuki
+{flex-direction: column;
+padding: 20px;}
+.Imagen-Checa,
+.Imagen-Miyuki,
+.Texto-Checa,
+.Texto-Miyuki
+{width: 100%;}
+header {flex-direction: column;
+padding: 20px;
+gap: 20px;}
+nav {flex-wrap: wrap;
+justify-content: center;
+gap: 10px;}
+nav a {padding: 10px 12px;
+text-align: center;}
+.Mas {
+    padding: 20px;
+}
+.Galeria {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.Pie-Pagina {padding: 25px 20px;}
+.Info-Tinlow,
+.Contacto {width: 100%;}
+}
+.Contacto a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f5f0e6;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+.Contacto a i {font-size: 25px;
+color: #D8BE83;
+}
+.Contacto a:hover {color: #D8BE83;}
+.Visor-Imagen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.Imagen-Ampliada {
+    width: 75vw;
+    height: 80vh;
+    max-width: 1000px;
+    max-height: 800px;
+    object-fit: contain;
+    border-radius: 10px;
+    animation: aparecerImagen 0.4s ease;
+}
+@keyframes aparecerImagen {from {opacity: 0;
+transform: scale(0.85);}
+to {opacity: 1;
+transform: scale(1);}
+}
+.Cerrar-Visor {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+.Cerrar-Visor:hover {
+    color: #D8BE83;
+}
+.Galeria-Oculta {
+    display: none;
+}
+.Flecha-Anterior,
+.Flecha-Siguiente {
+    background-color: rgba(38, 61, 50, 0.8);
+    color: #D8BE83;
+    border: 2px solid #D8BE83;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.Flecha-Anterior:hover,
+.Flecha-Siguiente:hover {
+    background-color: #D8BE83;
+    color: #263d32;
+    transform: scale(1.1);
+}
+.Contador-Imagenes {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #D8BE83;
+    background-color: rgba(38, 61, 50, 0.8);
+
+    padding: 8px 18px;
+    border-radius: 20px;
+
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+
+    .Imagen-Ampliada {
+        width: 75vw;
+        height: 65vh;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .Flecha-Anterior,
+    .Flecha-Siguiente {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .Cerrar-Visor {
+        top: 15px;
+        right: 20px;
+        font-size: 35px;
+    }
+
+    .Contador-Imagenes {
+        bottom: 30px;
+        font-size: 15px;
+    }
+
+}
+.Texto-Checa h2 {
+    color: #263d32;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #b5965a;
+}
+.Texto-Checa p {
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 0;
+}
+.Texto-Miyuki h2 {
+    color: #263d32;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #b5965a;
+}
+
+.Texto-Miyuki p {
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 0;
+}
+@media (max-width: 768px) {
+
+    .Texto-Checa,
+    .Texto-Miyuki {
+        padding: 25px;
+    }
+
+    .Texto-Checa h2,
+    .Texto-Miyuki h2 {
+        font-size: 24px;
+    }
+
+    .Texto-Checa p,
+    .Texto-Miyuki p {
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+}
+.Imagen-Checa img,
+.Imagen-Miyuki img {
+    border: 3px solid #b5965a;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(38, 61, 50, 0.20);
+}
